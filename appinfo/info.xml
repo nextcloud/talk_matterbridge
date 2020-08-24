@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>talk_matterbridge</id>
+	<name>Talk Matterbridge</name>
+	<summary><![CDATA[This app brings the Matterbridge binary to your server to connect Nextcloud Talk with other chat services.]]></summary>
+	<description><![CDATA[This app brings the Matterbridge binary to your server to connect Nextcloud Talk with other chat services.
+It allows easy installation and updates of the binary in the known ways.
+
+Binary is licensed under Apache-2.0 License.]]></description>
+
+	<version>1.18.1</version>
+	<licence>agpl</licence>
+
+	<author>Gary Kim</author>
+	<author>Julien Veyssier</author>
+
+	<namespace>TalkMatterbridge</namespace>
+
+	<types>
+		<prevent_group_restriction />
+	</types>
+
+	<category>integration</category>
+
+	<website>https://github.com/nextcloud/talk_matterbridge</website>
+	<bugs>https://github.com/nextcloud/talk_matterbridge/issues</bugs>
+	<repository>https://github.com/nextcloud/talk_matterbridge.git</repository>
+
+	<dependencies>
+		<nextcloud min-version="20" max-version="20" />
+	</dependencies>
+
+	<repair-steps>
+		<post-migration>
+			<step>OCA\TalkMatterbridge\Migration\RegisterBinary</step>
+		</post-migration>
+		<install>
+			<step>OCA\TalkMatterbridge\Migration\RegisterBinary</step>
+		</install>
+	</repair-steps>
+</info>
