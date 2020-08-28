@@ -2,6 +2,8 @@
 
 app_name=talk_matterbridge
 
+matterbridge_version=1.18.1
+
 project_dir=$(CURDIR)/../$(app_name)
 build_dir=$(CURDIR)/build/artifacts
 appstore_dir=$(build_dir)/appstore
@@ -11,9 +13,20 @@ package_name=$(app_name)
 cert_dir=$(HOME)/.nextcloud/certificates
 version+=master
 
-all: appstore
+all: binaries appstore
 
-release: appstore create-tag
+release: binaries appstore create-tag
+
+.PHONY: binaries
+binaries:
+	rm -rf "$(project_dir)/bin"
+	mkdir -p "$(project_dir)/bin"
+	curl -L --output "$(project_dir)/bin/matterbridge-$(matterbridge_version)-linux-32bit" "https://github.com/42wim/matterbridge/releases/download/v$(matterbridge_version)/matterbridge-$(matterbridge_version)-linux-32bit"
+	chmod +x "$(project_dir)/bin/matterbridge-$(matterbridge_version)-linux-32bit"
+	curl -L --output "$(project_dir)/bin/matterbridge-$(matterbridge_version)-linux-64bit" "https://github.com/42wim/matterbridge/releases/download/v$(matterbridge_version)/matterbridge-$(matterbridge_version)-linux-64bit"
+	chmod +x "$(project_dir)/bin/matterbridge-$(matterbridge_version)-linux-64bit"
+	curl -L --output "$(project_dir)/bin/matterbridge-$(matterbridge_version)-linux-arm64" "https://github.com/42wim/matterbridge/releases/download/v$(matterbridge_version)/matterbridge-$(matterbridge_version)-linux-arm64"
+	chmod +x "$(project_dir)/bin/matterbridge-$(matterbridge_version)-linux-arm64"
 
 create-tag:
 	git tag -a v$(version) -m "Tagging the $(version) release."
