@@ -9,7 +9,7 @@ It allows easy installation and updates of the binary in the known ways.
 
 Binary is licensed under Apache-2.0 License.]]></description>
 
-	<version>1.18.1</version>
+	<version>1.18.2</version>
 	<licence>agpl</licence>
 
 	<author>Gary Kim</author>
