@@ -1,0 +1,6 @@
+/.idea/
+/.git/
+
+/Makefile
+/README.md
+/build/
