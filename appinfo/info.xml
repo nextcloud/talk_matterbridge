@@ -5,7 +5,7 @@
 	<name>Talk Matterbridge</name>
 	<summary><![CDATA[This app brings the Matterbridge binary to your server to connect Nextcloud Talk with other chat services.]]></summary>
 	<description><![CDATA[This app brings the Matterbridge binary to your server to connect Nextcloud Talk with other chat services.
-It allows easy installation and updates of the binary in the known ways.
+This allows admins to easily install and keep updated the Matterbridge binaries through a familiar interface.
 
 Binary is licensed under Apache-2.0 License.]]></description>
 
