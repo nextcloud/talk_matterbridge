@@ -67,14 +67,14 @@ class RegisterBinary implements IRepairStep {
 			}
 		}
 
-		// Make all binaries executable
-		chmod($binaryPath, 0755);
-
 		// Write the app config
 		$this->config->setAppValue('spreed', 'matterbridge_binary', $binaryPath);
 	}
 
 	protected function testBinary(string $binaryPath): ?string {
+		// Make binary executable
+		chmod($binaryPath, 0755);
+
 		$cmd = escapeshellcmd($binaryPath) . ' ' . escapeshellarg('-version');
 		try {
 			@exec($cmd, $output, $returnCode);
