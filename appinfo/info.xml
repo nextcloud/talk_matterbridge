@@ -9,7 +9,7 @@ This allows admins to easily install and keep updated the Matterbridge binaries 
 
 Binary is licensed under Apache-2.0 License.]]></description>
 
-	<version>1.19.0</version>
+	<version>1.20.0</version>
 	<licence>agpl</licence>
 
 	<author>Gary Kim</author>
