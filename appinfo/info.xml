@@ -28,7 +28,7 @@ Binary is licensed under Apache-2.0 License.]]></description>
 	<repository>https://github.com/nextcloud/talk_matterbridge.git</repository>
 
 	<dependencies>
-		<nextcloud min-version="20" max-version="20" />
+		<nextcloud min-version="20" max-version="21" />
 	</dependencies>
 
 	<repair-steps>
