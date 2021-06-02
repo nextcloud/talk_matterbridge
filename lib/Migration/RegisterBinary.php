@@ -31,7 +31,7 @@ use OCP\Migration\IRepairStep;
 
 class RegisterBinary implements IRepairStep {
 
-	public const VERSION = '1.22.1';
+	public const VERSION = '1.22.2';
 
 	/** @var IConfig */
 	protected $config;
