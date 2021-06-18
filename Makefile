@@ -2,7 +2,7 @@
 
 app_name=talk_matterbridge
 
-matterbridge_version=1.22.2
+matterbridge_version=1.22.3
 
 project_dir=$(CURDIR)/../$(app_name)
 build_dir=$(CURDIR)/build/artifacts
