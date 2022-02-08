@@ -27,6 +27,8 @@ binaries:
 	chmod +x "$(project_dir)/bin/matterbridge-$(matterbridge_version)-linux-64bit"
 	curl -L --output "$(project_dir)/bin/matterbridge-$(matterbridge_version)-linux-arm64" "https://github.com/42wim/matterbridge/releases/download/v$(matterbridge_version)/matterbridge-$(matterbridge_version)-linux-arm64"
 	chmod +x "$(project_dir)/bin/matterbridge-$(matterbridge_version)-linux-arm64"
+	curl -L --output "$(project_dir)/bin/matterbridge-$(matterbridge_version)-linux-armv6" "https://github.com/42wim/matterbridge/releases/download/v$(matterbridge_version)/matterbridge-$(matterbridge_version)-linux-armv6"
+	chmod +x "$(project_dir)/bin/matterbridge-$(matterbridge_version)-linux-armv6"
 
 create-tag:
 	git tag -a v$(version) -m "Tagging the $(version) release."
