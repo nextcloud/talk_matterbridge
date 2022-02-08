@@ -61,7 +61,11 @@ class RegisterBinary implements IRepairStep {
 			$binaryPath = $binaryDir . 'matterbridge-' . self::VERSION . '-linux-32bit';
 			$version = $this->testBinary($binaryPath);
 			if ($version === null) {
-				$output->warning('Failed to read version from matterbridge binary');
+				$binaryPath = $binaryDir . 'matterbridge-' . self::VERSION . '-linux-armv6';
+				$version = $this->testBinary($binaryPath);
+				if ($version === null) {
+					$output->warning('Failed to read version from matterbridge binary');
+				}
 			} else {
 				$output->info('Found matterbridge binary version: ' . $version);
 			}
