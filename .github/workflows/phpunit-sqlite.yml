@@ -83,6 +83,10 @@ jobs:
         working-directory: apps/${{ env.APP_NAME }}
         run: composer i
 
+      - name: Set up binaries
+        working-directory: apps/${{ env.APP_NAME }}
+        run: make binaries
+
       - name: Set up Nextcloud
         env:
           DB_PORT: 4444
