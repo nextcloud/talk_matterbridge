@@ -9,7 +9,7 @@ This allows admins to easily install and keep updated the Matterbridge binaries 
 
 Binary is licensed under Apache-2.0 License.]]></description>
 
-	<version>1.29.0-0</version>
+	<version>1.30.0-dev.0</version>
 	<licence>agpl</licence>
 
 	<author>Gary Kim</author>
@@ -28,7 +28,7 @@ Binary is licensed under Apache-2.0 License.]]></description>
 	<repository>https://github.com/nextcloud/talk_matterbridge.git</repository>
 
 	<dependencies>
-		<nextcloud min-version="27" max-version="29" />
+		<nextcloud min-version="27" max-version="30" />
 	</dependencies>
 
 	<repair-steps>
