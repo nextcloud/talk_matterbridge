@@ -1,3 +1,7 @@
+<!--
+  - SPDX-FileCopyrightText: 2020 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 # Talk Matterbridge
 
 This app brings the [Matterbridge binary from 42wim](https://github.com/42wim/matterbridge/) to your server to connect Nextcloud Talk with other chat services.

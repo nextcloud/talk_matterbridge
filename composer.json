@@ -4,17 +4,16 @@
 			"OCA\\TalkMatterbridge\\": "lib/"
 		}
 	},
-	"name": "nextcloud/talk_matterbridge",
-	"description": "talk_matterbridge",
-	"license": "AGPL",
 	"config": {
 		"optimize-autoloader": true,
 		"classmap-authoritative": true,
 		"platform": {
-			"php": "7.4"
-		}
+			"php": "8.0.2"
+		},
+		"sort-packages": true
 	},
 	"scripts": {
-		"lint": "find . -name \\*.php -not -path './vendor/*' -not -path './build/*' -print0 | xargs -0 -n1 php -l"
+		"lint": "find . -name \\*.php -not -path './vendor/*' -not -path './build/*' -print0 | xargs -0 -n1 php -l",
+		"test:unit": "echo 'Only testing installation of the app'"
 	}
 }

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2020 Nextcloud GmbH and Nextcloud contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
 # Makefile for building the project
 
 app_name=talk_matterbridge
@@ -37,8 +39,14 @@ appstore:
 	mkdir -p $(sign_dir)
 	rsync -a \
 	--exclude=.git \
+	--exclude=.github \
+	--exclude=.gitignore \
+	--exclude=.nextcloudignore \
 	--exclude=/build \
+	--exclude=/composer.json \
+	--exclude=/composer.json.license \
 	--exclude=Makefile \
+	--exclude=krankerl.toml \
 	--exclude=README.md \
 	$(project_dir)/ $(sign_dir)/$(app_name)
 	@if [ -f $(cert_dir)/$(app_name).key ]; then \
