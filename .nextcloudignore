@@ -3,6 +3,12 @@
 /.idea/
 /.git/
 
-/Makefile
-/README.md
+/.github/
+/.gitignore
+/.nextcloudignore
 /build/
+/composer.json
+/composer.json.license
+/Makefile
+/krankerl.toml
+/README.md
