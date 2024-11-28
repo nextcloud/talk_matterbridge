@@ -4,6 +4,8 @@
 -->
 # Talk Matterbridge
 
+[![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/talk_matterbridge)](https://api.reuse.software/info/github.com/nextcloud/talk_matterbridge)
+
 This app brings the [Matterbridge binary from 42wim](https://github.com/42wim/matterbridge/) to your server to connect Nextcloud Talk with other chat services.
 This allows admins to easily install and keep updated the Matterbridge binaries through a familiar interface.
 
