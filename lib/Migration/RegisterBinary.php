@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace OCA\TalkMatterbridge\Migration;
 
-use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\Migration\IOutput;
 use OCP\Migration\IRepairStep;
 
@@ -16,7 +16,7 @@ class RegisterBinary implements IRepairStep {
 	public const VERSION = '1.26.0';
 
 	public function __construct(
-		protected IConfig $config,
+		protected IAppConfig $appConfig,
 	) {
 	}
 
@@ -48,7 +48,7 @@ class RegisterBinary implements IRepairStep {
 		}
 
 		// Write the app config
-		$this->config->setAppValue('spreed', 'matterbridge_binary', $binaryPath);
+		$this->appConfig->setValueString('spreed', 'matterbridge_binary', $binaryPath);
 	}
 
 	protected function testBinary(string $binaryPath): ?string {
@@ -58,7 +58,7 @@ class RegisterBinary implements IRepairStep {
 		$cmd = escapeshellcmd($binaryPath) . ' ' . escapeshellarg('-version');
 		try {
 			@exec($cmd, $output, $returnCode);
-		} catch (\Throwable $e) {
+		} catch (\Throwable) {
 		}
 
 		if ($returnCode !== 0) {
